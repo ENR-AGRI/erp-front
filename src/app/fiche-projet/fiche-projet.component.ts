@@ -1732,7 +1732,7 @@ states = [
 
   { name: "Financement", img: "assets/icon/financement.png", tabs: "#tab10" },
   { name: "Scenario", img: "assets/icon/28011.png", tabs: "#tab2" },
-  { name: "Degistat", img: "assets/icon/26011.png", tabs: "#tab3" },
+
 
 
 ];
