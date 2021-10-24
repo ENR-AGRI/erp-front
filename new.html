@@ -1,0 +1,96 @@
+ <div style="color: white; padding-left: 20px; margin-top: 30px;">
+  <ul style="color: white; " ><B>Menu Principal</B> </ul>
+  </div>
+
+  <li class="active opened active has-sub" style="margin-top: 25px;">
+  <a >
+
+  <i class="entypo-cd" ></i>
+  <span>Base de Données</span>
+
+  </a>
+
+  <ul >
+  <li>
+  <a [routerLink]="['/Conception-data']" routerLinkActive="is-active" >
+
+  <span class="title" style="margin-left: 40px;" >Conception</span>
+
+  </a>
+  </li>
+  </ul>
+  <ul>
+  <li>
+  <a [routerLink]="['/construction']" routerLinkActive="is-active" >
+
+  <span class="title" style="margin-left: 40px;" >Construction</span>
+
+  </a>
+  </li>
+  </ul>
+  <ul>
+  <li >
+  <a [routerLink]="['/Exploitation-data']" routerLinkActive="is-active" >
+
+  <span class="title" style="margin-left: 40px;">
+  Exploitation</span>
+
+  </a>
+  </li>
+
+
+  </ul>
+  </li>
+
+
+  <li class="active opened active has-sub" >
+  <a>
+  <i class="entypo-cd" ></i>
+  <span class="title">Staff</span>
+  </a>
+
+  <ul >
+  <li >
+  <a [routerLink]="['/add-staff']" routerLinkActive="is-active">
+
+  <span class="title" style="margin-left: 40px;">Ajouter un staff</span>
+  </a>
+  </li>
+  </ul>
+  <ul>
+  <li>
+  <a [routerLink]="['/liste-staff']" routerLinkActive="is-active">
+
+  <span class="title" style="margin-left: 40px;">Liste staff</span>
+  </a>
+  </li>
+
+
+  </ul>
+  </li>
+
+  <li class="active opened active has-sub ">
+  <a routerLink="/liste-client">
+  <i class="entypo-cd" ></i>
+  <span class="title"> Liste Client</span>
+  </a>
+
+  <ul >
+  <li >
+  <a [routerLink]="['/add-client']" routerLinkActive="is-active">
+
+  <span class="title" style="margin-left: 40px;">Fiche Client</span>
+  </a>
+  </li>
+  </ul>
+
+  <ul>
+  <li>
+  <a [routerLink]="['/projet']" routerLinkActive="is-active">
+
+  <span class="title" style="margin-left: 40px;">Fiche Projet</span>
+  </a>
+  </li>
+
+  </ul>
+  </li>

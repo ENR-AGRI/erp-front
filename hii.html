@@ -1,0 +1,575 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+
+@takwabk
+AbdelhakBrahem
+/
+etude-biomasse
+Public
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+etude-biomasse/index.html
+@AbdelhakBrahem
+AbdelhakBrahem first commit
+Latest commit f33e04f 1 hour ago
+ History
+ 1 contributor
+532 lines (503 sloc)  19.3 KB
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="dashboard.css" rel="stylesheet" />
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <title>Fiche Client</title>
+
+    <!-- STYLE -->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="toggleNav navbar navbar-dark sticky-top flex-md-nowrap p-0 pt-1 pb-1 d-md-none d-lg-none">
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"> <img src="" alt=""> </a>
+      <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar Start -->
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block sidebar collapse"
+        >
+          <div class="d-flex align-items-center justify-content-center pt-1">
+            <img src="images/enragri-logo.png" alt="" />
+          </div>
+          <div class="d-flex align-items-center justify-content-center mt-3">
+            <input
+              class="search form-control form-control-sm"
+              type="text"
+              placeholder="Recherche"
+              aria-label=".form-control-sm example"
+            />
+          </div>
+          <div class="pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <i class="fi fi-rr-apps"></i>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <i class="fi fi-rr-address-book"></i>
+                  Liste clients
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fi fi-rr-truck-side"></i>
+                  Liste fournisseurs
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fi fi-rr-envelope"></i>
+                  Message
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fi fi-rr-notebook"></i>
+                  Tache
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fi fi-rr-map-marker"></i>
+                  Map
+                </a>
+              </li>
+            </ul>
+
+            <hr />
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fi fi-rr-settings"></i>
+                  Paramètres
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fi fi-rr-interrogation"></i>
+                  Aide
+                </a>
+              </li>
+              <hr />
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fi fi-rr-sign-out"></i>
+                  Déconnexion
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Sidebar End -->
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <!-- Navbar Start -->
+
+          <header class="py-3 mb-3 border-bottom">
+            <div
+              class="
+                container-fluid
+                d-grid
+                gap-3
+                align-items-center
+                d-flex
+                justify-content-end
+
+              "
+              style="grid-template-columns: 1fr 2fr"
+            >
+              <div class="d-flex align-items-center">
+
+                <button class="btn btn-primary me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Action</button>
+                <div>
+                  <a href="#"><i class="fi fi-rr-envelope me-4"></i></a>
+                </div>
+                <div>
+                  <a href="#"><i class="fi fi-rr-bell me-4"></i></a>
+                </div>
+
+                <div class="flex-shrink-0 dropdown">
+                  <a
+                    href="#"
+                    class="
+                      d-block
+                      link-dark
+                      text-decoration-none
+                      dropdown-toggle
+                    "
+                    id="dropdownUser2"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="https://github.com/mdo.png"
+                      alt="mdo"
+                      width="32"
+                      height="32"
+                      class="rounded-circle"
+                    />
+                  </a>
+                  <ul
+                    class="dropdown-menu text-small shadow"
+                    aria-labelledby="dropdownUser2"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">New project...</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <!-- Navbar End -->
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">Actions</h5>
+            </div>
+            <div class="offcanvas-body overflow-hidden d-flex flex-column justify-content-center">
+              <button type="button" class="btn btn-primary mb-1"><i class="fi fi-rr-envelope"></i></button>
+              <button type="button" class="btn btn-primary mb-1">C.C</button>
+              <button type="button" class="btn btn-primary mb-1">C.T</button>
+              <button type="button" class="btn btn-primary">F.F</button>
+            </div>
+
+          </div>
+
+          <div
+            class="
+              titre
+              flex-wrap flex-md-nowrap
+              align-items-start
+              pt-3
+              pb-2
+              mb-1
+            "
+          >
+            <h2>
+              Intérêt de porteur de projet
+            </h2>
+            <div class="subtitle">
+              <h5>1.1.Etude préliminaire de la biomasse</h5> <i class="fi fi-rr-book-alt"></i>
+            </div>
+          </div>
+
+
+          <!-- Formulaire Start -->
+
+          <div class="clientform container mt-3">
+            <div class="row">
+              <div class="col col-lg-12">
+                <div class="row gy-3 mb-3">
+                  <div class="col">
+                    <label for="cc-name" class="form-label">Intrant catégorie 1</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Sélectionner</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label">Intrant catégorie 2</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Sélectionner</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label">Intrant catégorie 3</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Sélectionner</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label">Description biblio</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="Description"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label">Unité de mesure</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Sélectionner</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row gy-3 mb-3">
+                  <div class="col">
+                    <label for="cc-name" class="form-label">MB/u</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label">MS/u</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label">%MS</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label">% MO/MS</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label">Nm3 CH4/t MO</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row gy-3 mb-3">
+                  <div class="col">
+                    <label for="cc-name" class="form-label">Description client</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="Description"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label"
+                      >Quantité</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-expiration" class="form-label">Total MB</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-expiration"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-cvv" class="form-label">Total MS</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-cvv"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-cvv" class="form-label">Nm3 CH4/t an</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-cvv"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row gy-3 mb-3">
+                  <div class="col">
+                    <label for="cc-name" class="form-label">Prix</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-name"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-name" class="form-label"
+                      >Base</label
+                    >
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Sélectionner</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="cc-expiration" class="form-label">Prix (€/t MB)</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-expiration"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-cvv" class="form-label">Prix (€/t MS)</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-cvv"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                  <div class="col">
+                    <label for="cc-cvv" class="form-label">Total</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cc-cvv"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button class="save">
+                  <span class="btn-txt">Sauvegarder</span>
+                  <span class="btn-icon"><i class="fi fi-rr-download"></i></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Formulaire End -->
+
+          <!-- Table Start-->
+
+          <div class="clientfile container mt-3 mb-3">
+            <button class="edit mb-1">
+              <span class="btn-txt">Modifier</span>
+              <span class="btn-icon"><i class="fi fi-rr-pencil"></i></i></span>
+            </button>
+
+            <div>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col-3">Description client</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Tot MB</th>
+                    <th scope="col">Tot MS</th>
+                    <th scope="col">Nm3/h</th>
+                    <th scope="col">KWe/h</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Desc1</th>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>000</td>
+                    <td>Action</td>
+                  </tr>
+                  <th scope="row">Desc2</th>
+                    <td>001</td>
+                    <td>001</td>
+                    <td>001</td>
+                    <td>001</td>
+                    <td>001</td>
+                    <td>Action</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          <!-- Table End -->
+        </main>
+      </div>
+    </div>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+      integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+      integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+      crossorigin="anonymous"
+    ></script>
+    <script src="dashboard.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
