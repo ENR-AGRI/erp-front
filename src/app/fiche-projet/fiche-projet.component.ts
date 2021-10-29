@@ -254,6 +254,162 @@ Hypotheque;
 percent_subvention;
 percent_fondPropre;
 Total_autres;
+percent_capital_apport;
+percent_emprunt_capital;
+percent_location;
+percent_emprunt_long_terme;
+taux_emprunt_capital;
+taux_emprunt_long_terme;
+currentDate = new Date();
+Nmbre_h_par_mois;
+Hausse_salaire;
+TAUX_CHARGES_PATRONALES;
+Montee_charge_n0
+Production_annuelle_biomethane_n0
+Inflation_tarif_GRDF_n0
+Indice_n0
+Tarif_biomethane_n0
+Montee_charge_n1
+Production_annuelle_biomethane_n1
+Inflation_tarif_GRDF_n1
+Indice_n1
+Tarif_biomethane_n1
+Montee_charge_n2
+Production_annuelle_biomethane_n2
+Inflation_tarif_GRDF_n2
+Indice_n2
+Tarif_biomethane_n2
+
+Montee_charge_n3
+Production_annuelle_biomethane_n3
+Inflation_tarif_GRDF_n3
+Indice_n3
+Tarif_biomethane_n3
+Montee_charge_n4
+Production_annuelle_biomethane_n4
+Inflation_tarif_GRDF_n4
+Indice_n4
+Tarif_biomethane_n4
+Montee_charge_n5
+Production_annuelle_biomethane_n5
+Inflation_tarif_GRDF_n5
+Indice_n5
+Tarif_biomethane_n5
+Montee_charge_n6
+Production_annuelle_biomethane_n6
+Inflation_tarif_GRDF_n6
+Indice_n6
+Tarif_biomethane_n6
+Montee_charge_n7
+Production_annuelle_biomethane_n7
+Inflation_tarif_GRDF_n7
+Indice_n7
+Tarif_biomethane_n7
+Montee_charge_n8
+Production_annuelle_biomethane_n8
+Inflation_tarif_GRDF_n8
+Indice_n8
+Tarif_biomethane_n8
+Montee_charge_n9
+Production_annuelle_biomethane_n9
+Inflation_tarif_GRDF_n9
+Indice_n9
+Tarif_biomethane_n9
+Montee_charge_n10
+Production_annuelle_biomethane_n10
+Inflation_tarif_GRDF_n10
+Indice_n10
+Tarif_biomethane_n10
+Montee_charge_n11
+Production_annuelle_biomethane_n11
+Inflation_tarif_GRDF_n11
+Indice_n11
+Tarif_biomethane_n11
+Montee_charge_n12
+Production_annuelle_biomethane_n12
+Inflation_tarif_GRDF_n12
+Indice_n12
+Tarif_biomethane_n12
+Montee_charge_n13
+Production_annuelle_biomethane_n13
+Inflation_tarif_GRDF_n13
+Indice_n13
+Tarif_biomethane_n13
+Montee_charge_n14
+Production_annuelle_biomethane_n14
+Inflation_tarif_GRDF_n14
+Indice_n14
+Tarif_biomethane_n14
+Montee_charge_n15
+Production_annuelle_biomethane_n15
+Inflation_tarif_GRDF_n15
+Indice_n15
+Tarif_biomethane_n15
+
+Vente_Biomethane_n1
+Redevance_traitement_dechets_n1
+Vente_digestat_solide_n1
+Vente_digestat_liquide_n1
+Vente_Biomethane_n2
+Redevance_traitement_dechets_n2
+Vente_digestat_solide_n2
+Vente_digestat_liquide_n2
+Vente_Biomethane_n3
+Redevance_traitement_dechets_n3
+Vente_digestat_solide_n3
+Vente_digestat_liquide_n3
+Vente_Biomethane_n4
+Redevance_traitement_dechets_n4
+Vente_digestat_solide_n4
+Vente_digestat_liquide_n4
+Vente_Biomethane_n5
+Redevance_traitement_dechets_n5
+Vente_digestat_solide_n5
+Vente_digestat_liquide_n5
+Vente_Biomethane_n6
+Redevance_traitement_dechets_n6
+Vente_digestat_solide_n6
+Vente_digestat_liquide_n6
+Vente_Biomethane_n7
+Redevance_traitement_dechets_n7
+Vente_digestat_solide_n7
+Vente_digestat_liquide_n7
+Vente_Biomethane_n8
+Redevance_traitement_dechets_n8
+Vente_digestat_solide_n8
+Vente_digestat_liquide_n8
+Vente_Biomethane_n9
+Redevance_traitement_dechets_n9
+Vente_digestat_solide_n9
+Vente_digestat_liquide_n9
+Vente_Biomethane_n10
+Redevance_traitement_dechets_n10
+Vente_digestat_solide_n10
+Vente_digestat_liquide_n10
+Vente_Biomethane_n11
+Redevance_traitement_dechets_n11
+Vente_digestat_solide_n11
+Vente_digestat_liquide_n11
+Vente_Biomethane_n12
+Redevance_traitement_dechets_n12
+Vente_digestat_solide_n12
+Vente_digestat_liquide_n12
+Vente_Biomethane_n13
+Redevance_traitement_dechets_n13
+Vente_digestat_solide_n13
+Vente_digestat_liquide_n13
+Vente_Biomethane_n14
+Redevance_traitement_dechets_n14
+Vente_digestat_solide_n14
+Vente_digestat_liquide_n14
+Vente_Biomethane_n15
+Redevance_traitement_dechets_n15
+Vente_digestat_solide_n15
+Vente_digestat_liquide_n15
+Redevance_traitement_dechets;
+
+
+
 
 
   //
@@ -313,7 +469,47 @@ this.Convention_de_credit_dette_syndiquee=30000
 this.Suivi_de_chantier=42000
 this.In_Front_Oblig=0
 this.percent_fondPropre="25%"
-this.percent_subvention=10
+this.percent_subvention="10%"
+this.taux_emprunt_capital="8%"
+this.taux_emprunt_long_terme="2.15%"
+this.Hausse_salaire="1%"
+this.TAUX_CHARGES_PATRONALES="35%"
+this.Indice_n0="100%"
+this.Montee_charge_n1="75%"
+this.Montee_charge_n2="100%"
+this.Montee_charge_n3="100%"
+this.Montee_charge_n4="100%"
+this.Montee_charge_n5="100%"
+this.Montee_charge_n6="100%"
+this.Montee_charge_n7="100%"
+this.Montee_charge_n8="100%"
+this.Montee_charge_n9="100%"
+this.Montee_charge_n10="100%"
+this.Montee_charge_n11="100%"
+this.Montee_charge_n12="100%"
+this.Montee_charge_n13="100%"
+this.Montee_charge_n14="100%"
+this.Montee_charge_n15="100%"
+
+this.Inflation_tarif_GRDF_n1="0%"
+this.Inflation_tarif_GRDF_n2=0.01
+this.Inflation_tarif_GRDF_n3=0.01
+this.Inflation_tarif_GRDF_n4=0.01
+this.Inflation_tarif_GRDF_n5=0.01
+this.Inflation_tarif_GRDF_n6=0.01
+this.Inflation_tarif_GRDF_n7=0.01
+this.Inflation_tarif_GRDF_n8=0.01
+this.Inflation_tarif_GRDF_n9=0.01
+this.Inflation_tarif_GRDF_n10=0.01
+this.Inflation_tarif_GRDF_n11=0.01
+this.Inflation_tarif_GRDF_n12=0.01
+this.Inflation_tarif_GRDF_n13=0.01
+this.Inflation_tarif_GRDF_n14=0.01
+this.Inflation_tarif_GRDF_n15=0.01
+
+this.Indice_n0=1
+this.Indice_n1=1
+this.Redevance_traitement_dechets=0
 
 this.LOCATION_VENTE_CONSTRUCTEUR=0
 
@@ -324,7 +520,26 @@ this.LOCATION_VENTE_CONSTRUCTEUR=0
       console.log("client", this.clients);
     });
     this.getFichesInfo();
+
+    this.Indice_n2=this.produit2((this.Inflation_tarif_GRDF_n2 +1),this.Indice_n1)
+    this.Indice_n3=this.produit2((this.Inflation_tarif_GRDF_n3 +1),this.Indice_n2)
+    this.Indice_n4=this.produit2((this.Inflation_tarif_GRDF_n4 +1),this.Indice_n3)
+    this.Indice_n5=this.produit2((this.Inflation_tarif_GRDF_n5 +1),this.Indice_n4)
+    this.Indice_n6=this.produit2((this.Inflation_tarif_GRDF_n6 +1),this.Indice_n5)
+    this.Indice_n7=this.produit2((this.Inflation_tarif_GRDF_n7 +1),this.Indice_n6)
+    this.Indice_n8=this.produit2((this.Inflation_tarif_GRDF_n8 +1),this.Indice_n7)
+    this.Indice_n9=this.produit2((this.Inflation_tarif_GRDF_n9 +1),this.Indice_n8)
+    this.Indice_n10=this.produit2((this.Inflation_tarif_GRDF_n10 +1),this.Indice_n9)
+    this.Indice_n11=this.produit2((this.Inflation_tarif_GRDF_n11 +1),this.Indice_n10)
+    this.Indice_n12=this.produit2((this.Inflation_tarif_GRDF_n12 +1),this.Indice_n11)
+    this.Indice_n13=this.produit2((this.Inflation_tarif_GRDF_n13 +1),this.Indice_n12)
+    this.Indice_n14=this.produit2((this.Inflation_tarif_GRDF_n14 +1),this.Indice_n13)
+    this.Indice_n15=this.produit2((this.Inflation_tarif_GRDF_n15 +1),this.Indice_n14)
+
+    // this.Indice_n3=this.produit2(())
+
   }
+
   setvalue(value) {
     this.InputValue = value.replace('%','')+"%";
 
@@ -342,6 +557,10 @@ this.LOCATION_VENTE_CONSTRUCTEUR=0
           this.percent_fondPropre = value.replace('%','')+"%";
 
            }
+           setvalue_subvention(value) {
+            this.percent_subvention = value.replace('%','')+"%";
+
+             }
   getDataExploitation(){
     this.agriSrv.getDataExploitation().subscribe((data) => {
       this.exploitations = data;
@@ -425,7 +644,7 @@ this.LOCATION_VENTE_CONSTRUCTEUR=0
     this.KWe_h = this.produit(+this.prod2, 10.8, 0.4);
     console.log("kwh", this.KWe_h);
 
-    this.KWe_h = this.KWe_h.toFixed(2);
+    this.KWe_h = this.KWe_h;
   }
 
   getFichesInfo() {
@@ -900,9 +1119,9 @@ return this.ss
       this.heure_fonction
     ).toFixed(2);
     console.log("enrg_KWH_an", this.enrg_KWH_an);
-    this.enrg_MWH_an = this.quotion(this.enrg_KWH_an, 1000).toFixed(2);
+    this.enrg_MWH_an = this.quotion(this.enrg_KWH_an, 1000);
     console.log("enrg_MWH_an", this.enrg_MWH_an);
-    this.enrg_GWH_an = this.quotion(this.enrg_MWH_an, 1000).toFixed(2);
+    this.enrg_GWH_an = this.quotion(this.enrg_MWH_an, 1000);
     console.log("enrg_MWH_an", this.enrg_GWH_an);
 
     this.Tarif_debut_contrat2 = this.quotion(this.Tarif_debut_contrat1, 100);
@@ -911,6 +1130,113 @@ return this.ss
       this.Tarif_debut_contrat2,
       this.s_tt_KWH_h
     );
+this.Production_annuelle_biomethane_n1=this.produit2(this.isNanFunction(this.Montee_charge_n1.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n1=this.Production_annuelle_biomethane_n1.toFixed(2);
+this.Production_annuelle_biomethane_n2=this.produit2(this.isNanFunction(this.Montee_charge_n2.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n2=this.Production_annuelle_biomethane_n2.toFixed(2);
+this.Production_annuelle_biomethane_n3=this.produit2(this.isNanFunction(this.Montee_charge_n3.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n3=this.Production_annuelle_biomethane_n3.toFixed(2);
+
+this.Production_annuelle_biomethane_n4=this.produit2(this.isNanFunction(this.Montee_charge_n4.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n4=this.Production_annuelle_biomethane_n4.toFixed(2);
+this.Production_annuelle_biomethane_n5=this.produit2(this.isNanFunction(this.Montee_charge_n5.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n5=this.Production_annuelle_biomethane_n5.toFixed(2);
+this.Production_annuelle_biomethane_n6=this.produit2(this.isNanFunction(this.Montee_charge_n6.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n6=this.Production_annuelle_biomethane_n6.toFixed(2);
+this.Production_annuelle_biomethane_n7=this.produit2(this.isNanFunction(this.Montee_charge_n7.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n7=this.Production_annuelle_biomethane_n7.toFixed(2);
+this.Production_annuelle_biomethane_n8=this.produit2(this.isNanFunction(this.Montee_charge_n8.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n8=this.Production_annuelle_biomethane_n8.toFixed(2);
+this.Production_annuelle_biomethane_n9=this.produit2(this.isNanFunction(this.Montee_charge_n9.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n9=this.Production_annuelle_biomethane_n9.toFixed(2);
+
+this.Production_annuelle_biomethane_n10=this.produit2(this.isNanFunction(this.Montee_charge_n10.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n10=this.Production_annuelle_biomethane_n10.toFixed(2);
+this.Production_annuelle_biomethane_n11=this.produit2(this.isNanFunction(this.Montee_charge_n11.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n11=this.Production_annuelle_biomethane_n11.toFixed(2);
+this.Production_annuelle_biomethane_n12=this.produit2(this.isNanFunction(this.Montee_charge_n12.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n12=this.Production_annuelle_biomethane_n12.toFixed(2);
+this.Production_annuelle_biomethane_n13=this.produit2(this.isNanFunction(this.Montee_charge_n13.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n13=this.Production_annuelle_biomethane_n13.toFixed(2);
+this.Production_annuelle_biomethane_n14=this.produit2(this.isNanFunction(this.Montee_charge_n14.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n14=this.Production_annuelle_biomethane_n14.toFixed(2);
+this.Production_annuelle_biomethane_n15=this.produit2(this.isNanFunction(this.Montee_charge_n15.replace('%','')),this.enrg_MWH_an)
+this.Production_annuelle_biomethane_n15=this.Production_annuelle_biomethane_n15.toFixed(2);
+this.Tarif_biomethane_n1=this.produit2(this.Tarif_debut_contrat2,1000)
+this.Tarif_biomethane_n1=this.Tarif_biomethane_n1.toFixed(2)
+this.Tarif_biomethane_n2=this.produit2(this.Tarif_biomethane_n1,(this.Inflation_tarif_GRDF_n2 +1))
+this.Tarif_biomethane_n2=this.Tarif_biomethane_n2.toFixed(2)
+this.Tarif_biomethane_n3=this.produit2(this.Tarif_biomethane_n2,(this.Inflation_tarif_GRDF_n3 +1))
+this.Tarif_biomethane_n3=this.Tarif_biomethane_n3.toFixed(2)
+this.Tarif_biomethane_n4=this.produit2(this.Tarif_biomethane_n3,(this.Inflation_tarif_GRDF_n4 +1))
+this.Tarif_biomethane_n4=this.Tarif_biomethane_n4.toFixed(2)
+this.Tarif_biomethane_n5=this.produit2(this.Tarif_biomethane_n4,(this.Inflation_tarif_GRDF_n5 +1))
+this.Tarif_biomethane_n5=this.Tarif_biomethane_n5.toFixed(2)
+this.Tarif_biomethane_n6=this.produit2(this.Tarif_biomethane_n5,(this.Inflation_tarif_GRDF_n6 +1))
+this.Tarif_biomethane_n6=this.Tarif_biomethane_n6.toFixed(2)
+this.Tarif_biomethane_n7=this.produit2(this.Tarif_biomethane_n6,(this.Inflation_tarif_GRDF_n7 +1))
+this.Tarif_biomethane_n7=this.Tarif_biomethane_n7.toFixed(2)
+this.Tarif_biomethane_n8=this.produit2(this.Tarif_biomethane_n7,(this.Inflation_tarif_GRDF_n8 +1))
+this.Tarif_biomethane_n8=this.Tarif_biomethane_n8.toFixed(2)
+this.Tarif_biomethane_n9=this.produit2(this.Tarif_biomethane_n8,(this.Inflation_tarif_GRDF_n9 +1))
+this.Tarif_biomethane_n9=this.Tarif_biomethane_n9.toFixed(2)
+this.Tarif_biomethane_n10=this.produit2(this.Tarif_biomethane_n9,(this.Inflation_tarif_GRDF_n10 +1))
+this.Tarif_biomethane_n10=this.Tarif_biomethane_n10.toFixed(2)
+this.Tarif_biomethane_n11=this.produit2(this.Tarif_biomethane_n10,(this.Inflation_tarif_GRDF_n11 +1))
+this.Tarif_biomethane_n11=this.Tarif_biomethane_n11.toFixed(2)
+this.Tarif_biomethane_n12=this.produit2(this.Tarif_biomethane_n11,(this.Inflation_tarif_GRDF_n12 +1))
+this.Tarif_biomethane_n12=this.Tarif_biomethane_n12.toFixed(2)
+this.Tarif_biomethane_n13=this.produit2(this.Tarif_biomethane_n12,(this.Inflation_tarif_GRDF_n13 +1))
+this.Tarif_biomethane_n13=this.Tarif_biomethane_n13.toFixed(2)
+this.Tarif_biomethane_n14=this.produit2(this.Tarif_biomethane_n13,(this.Inflation_tarif_GRDF_n14 +1))
+this.Tarif_biomethane_n14=this.Tarif_biomethane_n14.toFixed(2)
+this.Tarif_biomethane_n15=this.produit2(this.Tarif_biomethane_n14,(this.Inflation_tarif_GRDF_n15 +1))
+this.Tarif_biomethane_n15=this.Tarif_biomethane_n15.toFixed(2)
+
+this.Vente_Biomethane_n1=this.produit2(this.Tarif_biomethane_n1,this.Production_annuelle_biomethane_n1)
+this.Vente_Biomethane_n1=this.Vente_Biomethane_n1.toFixed(2)
+this.Vente_Biomethane_n2=this.produit2(this.Tarif_biomethane_n1,this.Production_annuelle_biomethane_n2)
+this.Vente_Biomethane_n2=parseFloat(this.Vente_Biomethane_n2)
+
+this.Vente_Biomethane_n3=this.produit2(this.Tarif_biomethane_n3,this.Production_annuelle_biomethane_n3)
+this.Vente_Biomethane_n3=parseFloat(this.Vente_Biomethane_n3)
+
+this.Vente_Biomethane_n4=this.produit2(this.Tarif_biomethane_n4,this.Production_annuelle_biomethane_n4)
+this.Vente_Biomethane_n4=this.Vente_Biomethane_n4.toFixed(2)
+this.Vente_Biomethane_n5=this.produit2(this.Tarif_biomethane_n5,this.Production_annuelle_biomethane_n5)
+this.Vente_Biomethane_n5=this.Vente_Biomethane_n5.toFixed(2)
+this.Vente_Biomethane_n6=this.produit2(this.Tarif_biomethane_n6,this.Production_annuelle_biomethane_n6)
+this.Vente_Biomethane_n6=this.Vente_Biomethane_n6.toFixed(2)
+this.Vente_Biomethane_n7=this.produit2(this.Tarif_biomethane_n7,this.Production_annuelle_biomethane_n7)
+this.Vente_Biomethane_n7=this.Vente_Biomethane_n7.toFixed(2)
+this.Vente_Biomethane_n8=this.produit2(this.Tarif_biomethane_n8,this.Production_annuelle_biomethane_n8)
+this.Vente_Biomethane_n8=this.Vente_Biomethane_n8.toFixed(2)
+this.Vente_Biomethane_n9=this.produit2(this.Tarif_biomethane_n9,this.Production_annuelle_biomethane_n9)
+this.Vente_Biomethane_n9=this.Vente_Biomethane_n9.toFixed(2)
+this.Vente_Biomethane_n10=this.produit2(this.Tarif_biomethane_n10,this.Production_annuelle_biomethane_n10)
+this.Vente_Biomethane_n10=this.Vente_Biomethane_n10.toFixed(2)
+this.Vente_Biomethane_n11=this.produit2(this.Tarif_biomethane_n11,this.Production_annuelle_biomethane_n11)
+this.Vente_Biomethane_n11=this.Vente_Biomethane_n11.toFixed(2)
+this.Vente_Biomethane_n12=this.produit2(this.Tarif_biomethane_n12,this.Production_annuelle_biomethane_n12)
+this.Vente_Biomethane_n12=this.Vente_Biomethane_n12.toFixed(2)
+this.Vente_Biomethane_n13=this.produit2(this.Tarif_biomethane_n13,this.Production_annuelle_biomethane_n13)
+this.Vente_Biomethane_n13=this.Vente_Biomethane_n13.toFixed(2)
+this.Vente_Biomethane_n14=this.produit2(this.Tarif_biomethane_n14,this.Production_annuelle_biomethane_n14)
+this.Vente_Biomethane_n14=this.Vente_Biomethane_n14.toFixed(2)
+this.Vente_Biomethane_n15=this.produit2(this.Tarif_biomethane_n15,this.Production_annuelle_biomethane_n15)
+this.Vente_Biomethane_n15=this.Vente_Biomethane_n15.toFixed(2)
+this.Redevance_traitement_dechets_n1=this.produit(this.Tarif_biomethane_n1,this.Production_annuelle_biomethane_n1,this.Redevance_traitement_dechets)
+this.Redevance_traitement_dechets_n2=this.produit(this.Tarif_biomethane_n2,this.Production_annuelle_biomethane_n2,this.Redevance_traitement_dechets)
+this.Redevance_traitement_dechets_n3=this.produit(this.Tarif_biomethane_n3,this.Production_annuelle_biomethane_n3,this.Redevance_traitement_dechets)
+this.Redevance_traitement_dechets_n4=this.produit(this.Tarif_biomethane_n4,this.Production_annuelle_biomethane_n4,this.Redevance_traitement_dechets)
+this.Redevance_traitement_dechets_n5=this.produit(this.Tarif_biomethane_n5,this.Production_annuelle_biomethane_n5,this.Redevance_traitement_dechets)
+this.Redevance_traitement_dechets_n6=this.produit(this.Tarif_biomethane_n6,this.Production_annuelle_biomethane_n6,this.Redevance_traitement_dechets)
+
+
+
+
+
+
 
 
   //somme kwh
@@ -993,7 +1319,7 @@ this.isNanFunction(this.constructions[0].Tab_140.Lot_4_Genie_Civil_circulaire_di
             this.isNanFunction(this.constructions[0].Tab_140.Materiel.Sous_Total_Prix_vente) + this.isNanFunction(this.constructions[0].totaux_prixVente_Total  )
 console.log("this.total_invest*********",(this.total_invest));
 
-this.FONDS_PROPRES=this.produit2(this.total_invest, this.isNanFunction(this.percent_fondPropre))
+this.FONDS_PROPRES=this.produit2(this.total_invest, 0.25)
 console.log("FONDS_PROPRES",this.FONDS_PROPRES);
 this.BFR_Frais_Financier=this.produit2(this.total_invest - this.isNanFunction(this.Total_autres) + this.Hypotheque+
 this.Audit_assurantiel+this.Audit_juridique+this.Audit_Technique+this.Audit_Fiscal+this.Convention_de_credit_dette_syndiquee+
@@ -1018,6 +1344,14 @@ console.log("TOTAL_FINANCEMENTS",this.TOTAL_FINANCEMENTS,
 this.isNanFunction(this.FONDS_PROPRES),
 this.isNanFunction(this.LOCATION_VENTE_CONSTRUCTEUR),
 this.isNanFunction(this.EMPRUNT_LONG_ERME));
+this.percent_capital_apport=this.quotion(this.CAPITAL_APPORT_COMPTE_COURANt,this.total_invest)
+this.percent_emprunt_capital=this.quotion(this.EMPRUNT_CAPITAL,this.total_invest)
+this.percent_location=this.quotion(this.LOCATION_VENTE_CONSTRUCTEUR,this.total_invest)
+this.percent_emprunt_long_terme=this.quotion(this.EMPRUNT_LONG_ERME,this.total_invest)
+
+
+
+
 
 
 
@@ -1203,6 +1537,8 @@ if(this.ss >=0  && this.ss <= 140 )
 
   this.D=this.exploitations[0];
   this.bfr_consommable=this.D.Tab140.tabExploi_140_ChargesConsommables.Charbon_actif.an
+  this.Nmbre_h_par_mois=this.quotion(this.D.Tab140.Charges_Exploitation.Conduite_unite_methanisation.an,12)
+console.log("Nmbre_h_par_mois***",this.Nmbre_h_par_mois);
 
   this.c=this.constructions[0];
 
@@ -1214,6 +1550,7 @@ else  if(this.ss>141 && this.ss <=190 )
 {
   this.D=this.exploitations[1];
   this.bfr_consommable=this.D.Tab190.tabExploi_190_ChargesConsommables.Charbon_actif.an
+
   this.c=this.constructions[1];
 
   return  this.c && this.D;
@@ -1271,6 +1608,9 @@ else  if(this.ss>961 && this.ss <=1120 )
   return  this.c && this.D;
 
 }
+
+
+
 
 this.calaculPrixDeBase(500);
 

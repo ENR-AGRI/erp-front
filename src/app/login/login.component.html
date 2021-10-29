@@ -8,26 +8,25 @@
         </a>
       </div>
       <p class="description" style="color: white; margin-top: 15px">
-        Bienvenue, connectez-vous pour accéder à votre espace ENR Agri
+        Bienvenu,connecter pour acceder à votre espace dans ENRagri
       </p>
+      <div class="alert alert-danger " role="alert" *ngIf="msgError">
+        {{msgError}}
+
+        </div>
     </div>
 
     <!-- <div class="login-progressbar">
       <div></div>
+        <div class="progress" *ngIf="showSpinner">
+      <div class="indeterminate"></div>
+  </div>
     </div>-->
+
+
 
     <div class="login-form">
       <div class="login-content">
-        <div class="form-login-error">
-          <h3>Invalid login</h3>
-          <p>
-            Enter <strong>demo</strong>/<strong>demo</strong> as login and
-            password.
-          </p>
-
-          {{ msgError }}
-        </div>
-
         <form
           method="post"
           role="form"
@@ -48,11 +47,13 @@
                 class="form-control"
                 id="username"
                 placeholder="Email"
+
               />
-              <p *ngIf="fnEmail.touched && !fnEmail.valid" class="text-danger">
-                <span *ngIf="fnEmail.errors.email">is not an email</span>
-                <span *ngIf="fnEmail.errors.required">email is required</span>
-              </p>
+
+            </div>
+            <div class="alert alert-danger "  *ngIf="fnEmail.touched && !fnEmail.valid" >
+              <p *ngIf="fnEmail.errors.email">is not an email</p>
+              <p *ngIf="fnEmail.errors.required">Email is required</p>
             </div>
           </div>
 
@@ -72,9 +73,10 @@
                 placeholder="Password"
                 autocomplete="off"
               />
-              <p *ngIf="fnPwd.touched && !fnPwd.valid" class="text-danger">
+
+            </div>
+            <div class="alert alert-danger " *ngIf="fnPwd.touched && !fnPwd.valid" >
                 <span *ngIf="fnPwd.errors.required">password is required</span>
-              </p>
             </div>
           </div>
 
@@ -91,7 +93,7 @@
         </form>
 
         <div class="login-bottom-links">
-          <a [routerLink]="['/reset-password']" class="link"
+          <a [routerLink]="['/forgotPassword']" class="link"
             >Mot de passe oublié</a
           >
           <br />

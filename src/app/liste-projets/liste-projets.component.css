@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f7f7f7;
+}
+
+.project-list {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  min-height: 250px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+}
+
+.add-btn {
+  background-color: #00ae81;
+  padding: 8px 15px 8px 15px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 6px;
+  margin-top: 15px;
+  border: none;
+}
+
+
+
+.add-btn:hover {
+  background-color: #018a65;
+}
+
+label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+.uneditable-input:focus {
+  border-color: #00ae81;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(126, 239, 104, 0.6);
+  outline: 0 none;
+}
+
+::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+option {
+  font-size: 00.75rem;
+}
+
+input {
+  font-size: 14px;
+}
+
+.toggleNav {
+  background-color: #6e6e6e;
+}
+
+tr th {
+  font-size: 0.75rem;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+
+@media (max-width: 992px) {
+}
+
+
+
+
+.add-modal {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  min-height: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.add-btn {
+  background-color: #00ae81;
+  padding: 8px 15px 8px 15px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 6px;
+  margin-top: 15px;
+  margin-left: 17px;
+  border: none;
+  float: right;
+}
+
+.cncl-btn {
+  background-color: #ffffff;
+  padding: 6px 10px 6px 10px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #018a65;
+  border-radius: 6px;
+  margin-top: 15px;
+  margin-left: 17px;
+  border: 2px solid #018a65;
+  float: right;
+}
+
+.btn-txt,
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 3px;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+

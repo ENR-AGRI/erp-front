@@ -12,11 +12,12 @@ export class AppComponent {
    *
    */
   constructor(private router:Router) {
-    let token=localStorage.getItem('token')
-    if(!token){
-      this.router.navigate(['/login'])
+    // let token=localStorage.getItem('token')
+    // if(!token){
+    //   this.router.navigate(['/login'])
 
-    }
+    // }
+
 
   }
 }

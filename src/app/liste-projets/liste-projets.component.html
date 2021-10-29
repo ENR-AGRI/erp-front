@@ -1,0 +1,201 @@
+
+    <div class="container">
+      <div class="row">
+        <main class="col-md-10 ms-sm-auto col-lg-12">
+          <div class="project-list container mt-2">
+            <div class="row">
+              <div class="mb-3">
+                <button class="add-btn"   data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                  <span class="btn-txt">Ajouter un projet</span>
+                  <span class="btn-icon"><i class="fi fi-rr-add"></i></span>
+                </button>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr class="table-secondary">
+                    <th scope="col">Réf Projet</th>
+                    <th scope="col">Statut</th>
+                    <th scope="col">Accès</th>
+                    <th scope="col">Date Quotation</th>
+                    <th scope="col">Date Contrat</th>
+                    <th scope="col">Date De conception</th>
+                    <th scope="col">Date Construction</th>
+                    <th scope="col">Date En Service</th>
+                    <th scope="col">Date Abandon</th>
+                    <th scope="col">Commentaire</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let p of projets ">
+                    <th scope="row">{{p?.ref}}</th>
+
+                    <td>{{p?.status}}</td>
+                    <td>{{p?.acces}}</td>
+                    <td>{{p?.dateQuotation}}</td>
+                    <td>{{p?.dateContrat}}---</td>
+                    <td>{{p?.dateDeConception}}---</td>
+                    <td>{{p?.dateConstruction}}---</td>
+                    <td>{{p?.dateEnService}}---</td>
+                    <td>{{p?.dateAbandon}}---</td>
+                    <td>{{p?.commentaire}}---</td>
+
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+<!--Modal ajouter projet-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="formProjet" (ngSubmit)="createProjet()">
+
+
+      <div class="modal-body">
+    <div class="container-fluid">
+
+        <div class="row">
+          <div class="row">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Réf Projet</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm me-1"
+                    placeholder="00000"
+                    required
+                    formControlName="ref"
+                  />
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Statut</label>
+                  <select formControlName="status"
+                   class="form-control form-control-sm" aria-label="Default select example">
+
+                    <option value="Encours">Encours</option>
+                    <option value="Valide">Non Valide</option>
+                    <option value="Non Valide">Valide</option>
+                  </select>
+
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Accès</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="Fiche Projet"
+                    required
+                    formControlName="acces"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Date Quotation</label>
+                  <input
+                    type="date"
+                    class="form-control form-control-sm"
+                    placeholder="01/04/2021"
+                    required
+                    formControlName="dateQuotation"
+                  />
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Date Contrat</label>
+                  <input
+                    type="date"
+                    class="form-control form-control-sm"
+                    placeholder="05/08/2021"
+                    required
+                    formControlName="dateContrat"
+                  />
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Date De conception</label>
+                  <input
+                    type="date"
+                    class="form-control form-control-sm"
+                    placeholder="jj/mm/aaaa"
+                    required
+                    formControlName="dateDeConception"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Date Construction</label>
+                  <input
+                    type="date"
+                    class="form-control form-control-sm"
+                    placeholder="jj/mm/aaaa"
+                    required
+                    formControlName="dateConstruction"
+                  />
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Date En Service</label>
+                  <input
+                    type="date"
+                    class="form-control form-control-sm"
+                    placeholder="jj/mm/aaaa"
+                    required
+                    formControlName="dateEnService"
+                  />
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <label class="form-label">Date Abandon</label>
+                  <input
+                    type="date"
+                    class="form-control form-control-lg"
+                    placeholder="jj/mm/aaaa"
+                    required
+                    formControlName="dateAbandon"
+                  />
+                </div>
+                <div class="col-12 col-sm-12 col-lg-12">
+                  <label class="form-label">Commentaires</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    placeholder="commentaire"
+                    required
+                    formControlName="commentaire"
+                  />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="modal-footer">
+      <div class="buttons">
+        <button class="add-btn" type="submit">
+          <span class="btn-txt">Ajouter</span>
+        </button>
+        <button class="cncl-btn"  data-bs-dismiss="modal">
+          <span class="btn-txt">Annuler</span>
+        </button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+</div>
+
+
+
+
+
+

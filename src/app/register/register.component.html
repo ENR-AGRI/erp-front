@@ -19,6 +19,14 @@
         <p class="description" style="color: white">
           Bienvenu,inscrivez vous pour acceder à notre espace ENRagri
         </p>
+        <div class="alert alert-danger " role="alert" *ngIf="submitted && formClient.valid && msgError">
+          {{msgError}}
+
+          </div>
+          <div class="alert alert-success " role="alert" *ngIf="submitted && formClient.valid && msgSuccess">
+            {{msgSuccess}}
+
+            </div>
 
         <form
           id="form_login"
@@ -40,17 +48,14 @@
                 placeholder="nom"
               />
             </div>
-            <div
-              *ngIf="fnNom.touched && !fnNom.valid"
-              style="font-size: large; color: red"
-            >
-              <div *ngIf="fnNom.errors.minLength">
+            <div  *ngIf="submitted && fnNom.invalid" class="alert alert-danger ">
+              <div *ngIf="fnNom.errors.minlength">
                 Nom should be minimum
-                {{ fnNom.errors.minLength.requiredLength }}
+                {{ fnNom.errors.minlength.requiredLength }}
               </div>
-              <div *ngIf="fnNom.errors.maxLength">
-                Nom should be minimum
-                {{ fnNom.errors.maxLength.requiredLength }}
+              <div *ngIf="fnNom.errors.maxlength">
+                Nom should be maximum
+                {{ fnNom.errors.maxlength.requiredLength }}
               </div>
               <div *ngIf="fnNom.errors.required">Nom is required</div>
             </div>
@@ -70,20 +75,20 @@
                 placeholder="prenom"
               />
             </div>
-            <p
-              *ngIf="fnPrenom.touched && !fnPrenom.valid"
-              style="font-size: large; color: red"
+            <div class="alert alert-danger "
+              *ngIf="submitted && !fnPrenom.valid"
+
             >
-              <span *ngIf="fnPrenom.errors.minLength"
+              <span *ngIf="fnPrenom.errors.minlength"
                 >Name should be minimum
-                {{ fnPrenom.errors.minLength.requiredLength }}</span
+                {{ fnPrenom.errors.minlength.requiredLength }}</span
               >
-              <span *ngIf="fnPrenom.errors.maxLength"
-                >Prenom should be minimum
-                {{ fnPrenom.errors.maxLength.requiredLength }}</span
+              <span *ngIf="fnPrenom.errors.maxlength"
+                >Prenom should be maximum
+                {{ fnPrenom.errors.maxlength.requiredLength }}</span
               >
               <span *ngIf="fnPrenom.errors.required">Prenom is required</span>
-            </p>
+          </div>
           </div>
 
           <div class="form-group">
@@ -102,8 +107,8 @@
               />
             </div>
             <p
-              *ngIf="fnEmail.touched && !fnEmail.valid"
-              style="font-size: large; color: red"
+              *ngIf="submitted && !fnEmail.valid"
+              class="alert alert-danger "
             >
               <span *ngIf="fnEmail.errors.email">is not an email</span>
 
@@ -127,8 +132,8 @@
               />
             </div>
             <div
-              *ngIf="fnTel.touched && !fnTel.valid"
-              style="font-size: large; color: red"
+              *ngIf="submitted  && !fnTel.valid"
+              class="alert alert-danger "
             >
               <span *ngIf="fnTel.errors.pattern"
                 >Verifiez votre numero de telephone</span
@@ -154,17 +159,17 @@
                 placeholder="Password"
               />
             </div>
-            <p
-              *ngIf="fnPassword.touched && !fnPassword.valid"
-              style="font-size: large; color: red"
+            <div
+              *ngIf="submitted  && !fnPassword.valid"
+              class="alert alert-danger "
             >
-              <span *ngIf="fnPassword.errors.password"
-                >verifier votre mot de passe</span
+              <p *ngIf="fnPassword.errors.password"
+                >verifier votre mot de passe</p
               >
-              <span *ngIf="fnPassword.errors.required"
-                >Remplisez votre mot de passe</span
+              <p *ngIf="fnPassword.errors.required"
+                >Remplisez votre mot de passe</p
               >
-            </p>
+          </div>
           </div>
 
           <div class="form-group">
@@ -182,30 +187,23 @@
                 id="confirmPassword"
                 placeholder="Confirm Password"
                 validateEqual="password"
-                [ngClass]="{ 'is-invalid': submitted && fnConfirmPassword.errors }"
+
               />
             </div>
             <p
-              *ngIf="fnConfirmPassword.touched && !fnConfirmPassword.valid"
-              style="font-size: large; color: red"
+              *ngIf="submitted  && !fnConfirmPassword.valid"
+              class="alert alert-danger "
             >
               <span *ngIf="fnConfirmPassword.errors.required"
-                >Remplisez votre mot de passe</span
+                >Confirm Password is required</span
               >
 
-              <span *ngIf="fnConfirmPassword.errors.minLength"
-                >Name should be minimum
-                {{ fnConfirmPassword.errors.minLength.requiredLength }}</span
+              <span *ngIf="fnConfirmPassword.errors.mustMatch"
+                >Passwords must match</span
               >
-              <span *ngIf="fnConfirmPassword.errors.maxLength"
-                >Prenom should be minimum
-                {{ fnConfirmPassword.errors.maxLength.requiredLength }}</span
-              >
+
+
             </p>
-            <div *ngIf="submitted && fnConfirmPassword.errors" class="invalid-feedback">
-              <div *ngIf="fnConfirmPassword.errors.required">Confirm Password is required</div>
-              <div *ngIf="fnConfirmPassword.errors.mustMatch">Passwords must match</div>
-          </div>
           </div>
 
           <div class="form-group">

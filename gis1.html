@@ -1,0 +1,270 @@
+<header
+  class="
+    toggleNav
+    navbar navbar-dark
+    container-fluid
+    sticky-top
+    p-0
+    ps-1
+    pe-1
+    pt-1
+    pb-1
+    d-md-none d-lg-none
+  "
+>
+  <button
+    class="navbar-toggler position-absolute d-md-none collapsed"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#sidebarMenu"
+    aria-controls="sidebarMenu"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    class="
+      container-fluid
+      d-grid
+      gap-3
+      align-items-center
+      d-flex
+      justify-content-end
+    "
+  >
+    <div class="pe-0">
+      <a href="#" style="color: white"><i class="fi fi-rr-bell me-4"></i></a>
+    </div>
+    <div class="dropdown pe-0">
+      <a
+        href="#"
+        class="d-block link-dark text-decoration-none dropdown-toggle"
+        id="dropdownUser2"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        style="color: white"
+      >
+        <img
+          src="https://github.com/mdo.png"
+          alt="mdo"
+          width="32"
+          height="32"
+          class="rounded-circle"
+        />
+      </a>
+      <ul
+        class="dropdown-menu ms-auto text-small shadow ps-0"
+        aria-labelledby="dropdownUser2"
+      >
+        <li>
+          <a class="dropdown-item" href="#">New project...</a>
+        </li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <a class="dropdown-item" (click)="logout()" title="se deconnecter"
+            >Sign out</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar Start -->
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+      <div
+        class="
+          align-items-center
+          justify-content-center
+          pt-1
+          d-none d-sm-none d-md-flex
+        "
+      >
+        <img src="/assets/images/enragri-logo.png" alt="logo-enragri" />
+      </div>
+      <div
+        class="
+          d-none d-sm-none d-md-flex
+          align-items-center
+          justify-content-center
+          mt-3
+        "
+      >
+        <input
+          class="search form-control form-control-sm"
+          type="text"
+          placeholder="Recherche"
+          aria-label=".form-control-sm example"
+        />
+      </div>
+      <div class="pt-3" *ngIf="isAdmin">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">
+              <i class="fi fi-rr-apps"></i>
+              Dashboard
+            </a>
+          </li>
+
+          <!-- Base des données Start-->
+
+          <li class="nav-item" *ngIf="isAdmin">
+            <a
+              class="nav-link"
+              data-bs-toggle="collapse"
+              href="#multiCollapseExample1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="multiCollapseExample1"
+            >
+              <i class="fi fi-rr-database"></i> Base de données
+            </a>
+            <ul class="collapse multi-collapse" id="multiCollapseExample1">
+              <li class="list-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  [routerLink]="['/Conception-data']"
+                  routerLinkActive="is-active"
+                >
+                  <i class="fi fi-rr-paint-brush"></i>
+                  Conception
+                </a>
+              </li>
+              <li class="list-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  [routerLink]="['/construction']"
+                  routerLinkActive="is-active"
+                >
+                  <i class="fi fi-rr-building"></i>
+                  Construction
+                </a>
+              </li>
+              <li class="list-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  [routerLink]="['/Exploitation-data']"
+                  routerLinkActive="is-active"
+                >
+                  <i class="fi fi-rr-layers"></i>
+                  Exploitation
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Base des données End-->
+
+          <li class="nav-item" *ngIf="isAdmin">
+            <a class="nav-link" href="#">
+              <i class="fi fi-rr-address-book"></i>
+              Liste clients
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="isAdmin">
+            <a class="nav-link" href="#">
+              <i class="fi fi-rr-truck-side"></i>
+              Liste fournisseurs
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="isAdmin">
+            <a class="nav-link" href="#">
+              <i class="fi fi-rr-user"></i>
+              Staff
+            </a>
+          </li>
+        </ul>
+
+        <hr />
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fi fi-rr-settings"></i>
+              Paramètres
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fi fi-rr-interrogation"></i>
+              Aide
+            </a>
+          </li>
+        </ul>
+        <hr />
+        <ul class="nav flex-column mb-1" aria-expanded="false">
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/login">
+              <i class="fi fi-rr-sign-out"></i>
+              Déconnexion
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="pt-3" *ngIf="isUser">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="['/projet']"
+              routerLinkActive="is-active"
+            >
+              <i class="fi fi-rr-folder"></i>
+              Votre Fiche
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fi fi-rr-list"></i>
+              Liste Projets
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="fi fi-rr-envelope"></i>
+              Message
+            </a>
+          </li>
+        </ul>
+
+        <hr />
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="fi fi-rr-settings"></i>
+              Paramètres
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="fi fi-rr-interrogation"></i>
+              Aide
+            </a>
+          </li>
+        </ul>
+        <hr />
+        <ul class="nav flex-column mb-1" aria-expanded="false">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/login"
+              routerLinkActive="is-active"
+            >
+              <i class="fi fi-rr-sign-out"></i>
+              Déconnexion
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sidebar End -->
+  </div>
+</div>

@@ -89,23 +89,23 @@ export class AddClientComponent implements OnInit {
 
 
   }
-  signUpClient() {
-    this.authSrv.addUser(this.formClient.value).subscribe(
-      (data: any) => {
-        console.log("data",data);
-        console.log("this.formClient.value",this.formClient.value);
+  // signUpClient() {
+  //   this.authSrv.addUser(this.formClient.value).subscribe(
+  //     (data: any) => {
+  //       console.log("data",data);
+  //       console.log("this.formClient.value",this.formClient.value);
 
-        // if (data) this.toastr.success(data.msgsrv);
-        // console.log("data error", data.msgsrv);
-        // this.formClient.reset();
-      },
-      // (err:any) => {
-      //   let msg = "verifier les champs saisie";
-      //   // this.toastr.warning(err.error.msgsrv);
-      //   this.toastr.warning(msg);
-      // }
-    );
-  }
+  //       // if (data) this.toastr.success(data.msgsrv);
+  //       // console.log("data error", data.msgsrv);
+  //       // this.formClient.reset();
+  //     },
+  //     // (err:any) => {
+  //     //   let msg = "verifier les champs saisie";
+  //     //   // this.toastr.warning(err.error.msgsrv);
+  //     //   this.toastr.warning(msg);
+  //     // }
+  //   );
+  // }
   getAllActivites() {
     this.agriSrv.getAllActivites().subscribe((data: any) => {
       this.activities = data;

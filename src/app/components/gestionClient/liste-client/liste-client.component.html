@@ -1,18 +1,19 @@
-<h3 style="color: #00AE81;">Liste Client</h3>
+<h3 style="color: #00AE81;">Liste Clients</h3>
 
 
 
 
 
 
-<div class="row">
+<!-- travail takwa with controler des champs
+   <div class="row">
   <div class="col-md-12">
     <div class="main-card mb-3 card">
       <div class="card-header color">
         <div class="btn-actions-pane-right">
           <div role="group" class="btn-group-sm btn-group">
 
-            <button class="active btn btn-success" style="font-family: open Sans;"
+            <button  style="font-family: open Sans;"
               [routerLink]="['/addClient']">Ajouter Nouveau</button>
 
 
@@ -121,11 +122,91 @@
         </table>
       </div>
       <div class="d-block text-center card-footer">
-        <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
+        <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger"> Annuler
           <i class="pe-7s-trash btn-icon-wrapper"> </i>
         </button>
-        <button class="btn-wide btn btn-success">Save</button>
+        <button class="mr-2 btn-wide btn btn-success">Save</button>
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+  <div class="container">
+
+    <div class="staff-tab mb-3">
+      <div class="buttons mb-2">
+        <button class="add-btn">
+          <span class="btn-txt">Ajouter</span>
+          <span class="btn-icon"></span>
+        </button>
+        <button class="edt-btn">
+          <span class="btn-txt">Modifier</span>
+          <span class="btn-icon"><i class="fi fi-rr-pencil"></i></span>
+        </button>
+      </div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Ref Client</th>
+
+              <th scope="col">Prénom</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Fonction</th>
+              <th scope="col">Activité</th>
+              <th scope="col">Email</th>
+              <th scope="col">Tel</th>
+              <th scope="col">Rue</th>
+              <th scope="col">CP</th>
+              <th scope="col">Ville</th>
+              <th scope="col">Pays</th>
+              <th scope="col">REP</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let c of clientFilter">
+              <th scope="row">{{c?.matricule}}</th>
+
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+              <td>{{c?.Src_Client}}</td>
+            </tr>
+
+            <tr>
+              <th scope="row">3</th>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+              <td>Text</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

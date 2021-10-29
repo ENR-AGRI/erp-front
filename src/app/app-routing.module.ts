@@ -30,10 +30,14 @@ import { Exploitation760Component } from "./exploitation/exploitation760/exploit
 import { Exploitation960Component } from "./exploitation/exploitation960/exploitation960.component";
 import { FicheProjetComponent } from "./fiche-projet/fiche-projet.component";
 import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
+import { ListeFournisseursComponent } from "./liste-fournisseurs/liste-fournisseurs.component";
+import { ListeProjetsComponent } from "./liste-projets/liste-projets.component";
 import { LoginComponent } from "./login/login.component";
 import { NewTestComponent } from "./new-test/new-test.component";
 import { OpexComponent } from "./opex/opex.component";
+import { ProfileClientComponent } from "./profile-client/profile-client.component";
 import { RegisterComponent } from "./register/register.component";
+import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 import { ScenarioComponent } from "./scenario/scenario.component";
 import { AdminGuard } from "./services/guard/admin.service";
 import { AuthGuard } from "./services/guard/auth.service";
@@ -46,7 +50,7 @@ const routes: Routes = [
     component: LayoutComponent,canActivate:[AuthGuard],
 
     children: [
-      { path: "", component: NewTestComponent ,canActivate:[AuthGuard] },
+      { path: "", component: ProfileClientComponent ,canActivate:[AuthGuard] },
       { path: "home", component: HomeComponent ,canActivate:[AuthGuard]},
       { path: "add-staff", component: AddStaffComponent ,canActivate:[AuthGuard,AdminGuard]},
       { path: "add-client", component: AddClientComponent ,canActivate:[AuthGuard]},
@@ -78,13 +82,19 @@ const routes: Routes = [
       { path: "affichage", component: AffichageComponent ,canActivate:[AuthGuard,AdminGuard]},
       { path: "scenario", component: ScenarioComponent ,canActivate:[AuthGuard,AdminGuard]},
       { path: "projet", component: FicheProjetComponent ,canActivate:[AuthGuard]},
-      { path: "test", component: NewTestComponent}
+      { path: "test", component: NewTestComponent},
+      { path: "liste-projets", component: ListeProjetsComponent},
+      { path: "liste-Fournisseurs", component: ListeFournisseursComponent},
+      { path: "profile", component: ProfileClientComponent }
     ],
   },
+  { path: '', component: LoginComponent, pathMatch: 'full' },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
-  { path: "reset-password", component: ForgotPasswordComponent },
-  { path: "verify/:token", component: VerifMailComponent },
+  { path: "forgotPassword", component: ForgotPasswordComponent },
+  { path: "reset-password", component: ResetPasswordComponent },
+  { path: "verify-email/:tokenForMailVerif", component: VerifMailComponent }
+
 
 ];
 

@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  API_URL: "https://api.erpenragri.com",
+API_URL: "https://api.erpenragri.com",
+  //API_URL: "http://localhost:3000",
+
 };
 
 /*

@@ -47,14 +47,32 @@ export class AuthService {
     console.log("user from user", user);
     return this.http.post(this.config.baseURL + "/register", user);
   }
-  verifyEmailAccount(token){
+  resetPassword(formBody){
 
-    return this.http.get(this.config.baseURL + "/verify/" + token);
+    console.log("reset pwd form from service",formBody);
+
+
+
+    return this.http.post(this.config.baseURL + "/resetPassword", formBody);
 
   }
-  addUser(user: any) {
+  profile(){
+    return this.http.get(this.config.baseURL + "/profile" );
+  }
+
+  forgotPassword(email){
+
+    return this.http.post(this.config.baseURL + "/forgotPassword", email);
+
+  }
+  verifyEmailAccount(tokenForMailVerif){
+
+    return this.http.get(this.config.baseURL + "/verify-email/" + tokenForMailVerif);
+
+  }
+  updateProfile(user: any) {
     console.log("user",user);
-    return this.http.post(this.config.baseURL + "/addClient", user);
+    return this.http.post(this.config.baseURL + "/updateProfile", user);
 
 
   }

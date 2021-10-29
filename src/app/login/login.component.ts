@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   rember: boolean;
   invalidLogin: Boolean;
   msgError: AppError;
+
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
@@ -36,22 +37,27 @@ export class LoginComponent implements OnInit {
     // }
   }
   login() {
+
     console.log("logiiiin");
-    //   if (this.formLogin.valid)
+      if (this.formLogin.valid)
     this.authSrv.login(this.formLogin.value).subscribe(
       (data: any) => {
         console.log(data);
         if (data) {
           let returnUrl = this.route.snapshot.queryParamMap.get("returnUrl");
-          this.router.navigate([returnUrl || "/projet"]);
+          this.router.navigate([returnUrl || "/profile"]);
         } else {
           this.invalidLogin = true;
         }
       },
       (error) => {
+
         if (error.originalError.error.msgsrv) {
-          this.msgError = error.originalError.error.msgsrv;
-          console.log(this.msgError);
+          setTimeout(() => {
+            this.msgError = error.originalError.error.msgsrv;
+          }, 500);
+
+
         }
       }
     );

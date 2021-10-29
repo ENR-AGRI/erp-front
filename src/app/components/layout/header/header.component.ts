@@ -7,10 +7,17 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+current_User;
   constructor(private auth:AuthService) { }
 
   ngOnInit(): void {
+    this.auth.profile().subscribe((data:any)=>{
+      this.current_User=data
+      console.log("current_User",this.current_User);
+    }
+
+
+    )
   }
   logout(){
     this.auth.logout();

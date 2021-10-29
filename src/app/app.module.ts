@@ -53,6 +53,10 @@ import { RegisterComponent } from './register/register.component';
 import { NewTestComponent } from './new-test/new-test.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerifMailComponent } from './verif-mail/verif-mail.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ListeProjetsComponent } from './liste-projets/liste-projets.component';
+import { ListeFournisseursComponent } from './liste-fournisseurs/liste-fournisseurs.component';
+import { ProfileClientComponent } from './profile-client/profile-client.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -97,6 +101,10 @@ import { VerifMailComponent } from './verif-mail/verif-mail.component';
     NewTestComponent,
     ForgotPasswordComponent,
     VerifMailComponent,
+    ResetPasswordComponent,
+    ListeProjetsComponent,
+    ListeFournisseursComponent,
+    ProfileClientComponent,
   ],
   imports: [
     BrowserModule,

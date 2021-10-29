@@ -83,14 +83,13 @@ li {
 @media (max-width: 768px) {
   .sidebar {
     top: 1.4rem;
+    width: 60%;
   }
 }
 
 @media (max-width: 992px) {
 }
 
-.is-active{
-
+.is-active {
   background-color: #373e4a;
-
 }

@@ -63,10 +63,10 @@ header i {
   min-height: 350px;
   padding-top: 40px;
   padding-bottom: 30px;
-  border-radius: 22px;
+  border-radius: 15px;
 }
 
-.save {
+.add-btn {
   background-color: #00ae81;
   padding: 8px 15px 8px 15px;
   text-decoration: none;
@@ -76,6 +76,18 @@ header i {
   border-radius: 6px;
   margin-top: 15px;
   border: none;
+}
+
+.add-btn:hover {
+  background-color: #018a65;
+}
+
+.btn-txt,
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 3px;
+  height: 100%;
 }
 
 .noteArea {
@@ -100,7 +112,7 @@ header i {
   min-height: 100px;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-radius: 22px;
+  border-radius: 15px;
 }
 
 label {
@@ -114,17 +126,6 @@ label {
 
 .clientfile input {
   width: 90px;
-}
-
-.saveFile {
-  background-color: #00ae81;
-  padding: 8px 15px 8px 15px;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  color: #ffffff;
-  border-radius: 6px;
-  border: none;
 }
 
 /* Medium devices (tablets, 768px and up) */

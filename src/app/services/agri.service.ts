@@ -9,14 +9,34 @@ import { ConfigService } from "./config.service";
 export class AgriService {
   constructor(private http: HttpClient, private config: ConfigService) {}
 
+  //CLIENT
+  getAllCients() {
+    return this.http.get(this.config.baseURL + "/clients");
+  }
+  getClientById(id: any) {
+    return this.http.get(this.config.baseURL + "/clients/" + id);
+  }
+  delete(id: any) {
+    return this.http.delete(this.config.baseURL + "/clients/" + id);
+  }
+  //PROJET
+  createProjet(projet: any) {
+    return this.http.post(this.config.baseURL + "/projets", projet);
+  }
+
+  getAllProjets() {
+    return this.http.get(this.config.baseURL + "/projets");
+  }
+
+
+
+
   addFicheClient(value) {
 
 
     return this.http.post(this.config.baseURL + "/fiches", value);
   }
-  getAllCients() {
-    return this.http.get(this.config.baseURL + "/clients");
-  }
+
   getAllStaffs() {
     return this.http.get(this.config.baseURL + "/staffs");
   }
@@ -26,18 +46,12 @@ export class AgriService {
   getAllSystems() {
     return this.http.get(this.config.baseURL + "/operations");
   }
-  getAllProjets() {
-    return this.http.get(this.config.baseURL + "/projets");
-  }
+
   getAllEtas() {
     return this.http.get(this.config.baseURL + "/");
   }
-  createProjet(projet: any) {
-    return this.http.post(this.config.baseURL + "/projets", projet);
-  }
-  getClientById(id: any) {
-    return this.http.get(this.config.baseURL + "/clients/" + id);
-  }
+
+
 
   getIC1() {
     return this.http.get(this.config.baseURL + "/ic1s");
@@ -63,9 +77,7 @@ export class AgriService {
   handlePostCreated() {
     return this.resultSubject.asObservable();
   }
-  delete(id: any) {
-    return this.http.delete(this.config.baseURL + "/clients/" + id);
-  }
+
 
   //construction
   getDataConstruction(){
